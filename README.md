@@ -1,0 +1,1 @@
+This repository contains a MadLibs... interpreter? Anyways, proceed with caution.
