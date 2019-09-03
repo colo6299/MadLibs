@@ -227,16 +227,20 @@ def test_story_init():
     
     slot_list_test = []
 
-    slot_list_test.append(SlotOfSpeech("type of animal", "#animal_1", 4, 'a', True))
-    slot_list_test.append(SlotOfSpeech("verb", "#verb_1", 1, 'a', False))
-    slot_list_test.append(SlotOfSpeech("adjective", "#adjective_1", 2, 'an', True))
-    slot_list_test.append(SlotOfSpeech("name of a place", "#place_name_1", 2, 'the', False))
-    slot_list_test.append(SlotOfSpeech("noun", "#noun_1", 1, 'a', True))
-    slot_list_test.append(SlotOfSpeech("name of a person", "#person_name_1", 2, 'a', False))
-    slot_list_test.append(SlotOfSpeech("verb ending in -ing", "#verb_2", 1, 'a', False))
 
-    test_story = "There once was #adjective_1 man, by the name of #person_name_1, who lived in #place_name_1.\
-    He was #verb_2 in #place_name_1, when he spotted #animal_1"
+
+    slot_list_test.append(SlotOfSpeech("adverb ending in -ly", "#adverb_1", 1, 'an', False))
+    slot_list_test.append(SlotOfSpeech("verb", "#verb_1", 1, 'a', False))
+    slot_list_test.append(SlotOfSpeech("adjective", "#adjective_1", 1, 'an', False))
+    slot_list_test.append(SlotOfSpeech("name of a place", "#place_name_1", 2, 'the', False))
+    slot_list_test.append(SlotOfSpeech("noun", "#noun_1", 3, 'a', False))
+    slot_list_test.append(SlotOfSpeech("name of a person", "#person_name_1", 2, 'the', False))
+    slot_list_test.append(SlotOfSpeech("verb ending in -ing", "#verb_2", 1, 'a', False))
+    slot_list_test.append(SlotOfSpeech("past tense verb", "#verb_3", 2, 'a', False))
+    slot_list_test.append(SlotOfSpeech("plural noun", "#noun_2", 1, 'a', False))
+
+    test_story = "There once was tall, #adjective_1 man, by the name of #person_name_1. One day, while #verb_2 near #place_name_1, he saw a massive #noun_1! It was nearly the size of ten #noun_2. \"I have to tell #person_name_1 about this\" he thought, as he #verb_3 there. He #adverb_1 took out his #noun_1 and #verb_3! Having done that, he ran home -to #place_name_1- where he he could finnaly #verb_1."
+    #verb_2 in #place_name_1, when he spotted #animal_1"
     
     return MadlibFile(test_story, slot_list_test)
 
